@@ -1,0 +1,242 @@
+[
+    {
+        "question": "The International Literacy Day is observed on ?",
+        "choice1": "Sep 8",
+        "choice2": "Nov 28",
+        "choice3": "May 2",
+        "choice4": "Sep 22",
+        "answer": 1
+    },
+    {
+        "question": "The language of Lakshadweep, a Union Territory of India, is ?",
+        "choice1": "Hindi",
+        "choice2": "Tamil",
+        "choice3": "Telugu",
+        "choice4": "Malayalam",
+        "answer": 4
+    },
+    {
+        "question": "In which group of places is the Kumbha Mela held every twelve years ?",
+        "choice1": "Ujjain, Puri; Prayag, Haridwar",
+        "choice2": "Prayag, Haridwar, Ujjain, Nasik",
+        "choice3": "Rameshwaram, Puri, Badrinath, Dwarika",
+        "choice4": "Chittakoot, Ujjain, Prayag, Haridwar",
+        "answer": 2
+    },
+    {
+        "question": "Bahubali festival is related to ?",
+        "choice1": "Islam",
+        "choice2": "Hinduism",
+        "choice3": "Buddhism",
+        "choice4": "Jainism",
+        "answer": 4
+    },
+    {
+        "question": "Which day is observed as the World Standards Day ?",
+        "choice1": "Jun 26",
+        "choice2": "Oct 14",
+        "choice3": "Nov 15",
+        "choice4": "Dec 2",
+        "answer": 2
+    },
+    {
+        "question": "Who is the current Prime Minister of India ?",
+        "choice1": "Shri Narendra Modi",
+        "choice2": "Rahul Gandhi",
+        "choice3": "Dr. Manmohan Singh",
+        "choice4": "Jawahar Lal Nehru",
+        "answer": 1
+    },
+    {
+        "question": "Who is the current President of India ?",
+        "choice1": "Pranab Mukherjee",
+        "choice2": "Narendra Modi",
+        "choice3": "Droupadi Murmu",
+        "choice4": "Rahul Gandhi",
+        "answer": 3
+    },
+    {
+        "question": "Where is the Taj Mahal located ?",
+        "choice1": "Agra",
+        "choice2": "Delhi",
+        "choice3": "Mumbai",
+        "choice4": "Mathura",
+        "answer": 1
+    },
+    {
+        "question": "On which day is Independence Day celebrated ?",
+        "choice1": "14 Nov",
+        "choice2": "15 Aug",
+        "choice3": "26 Jan",
+        "choice4": "2 Oct",
+        "answer": 2
+    },
+    {
+        "question": "Who was the first President of India ?",
+        "choice1": "A.P.J Abdul Kalam",
+        "choice2": "Dr. Rajendra Prasad",
+        "choice3": "Sarvepalli Radhakrishnan",
+        "choice4": "Zakir Hussain",
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is the correct syntax to include a header file in C?",
+        "choice1": "#include <header.h>",
+        "choice2": "#include \"header.h\"",
+        "choice3": "#include {header.h}",
+        "choice4": "#include (header.h)",
+        "answer": 2
+    },
+    {
+        "question": "What is the default value of an uninitialized local variable in C?",
+        "choice1": "0",
+        "choice2": "NULL",
+        "choice3": "Undefined",
+        "choice4": "1",
+        "answer": 3
+    },
+    {
+        "question": "How do you declare a pointer to an integer in C?",
+        "choice1": "int *ptr;",
+        "choice2": "pointer int ptr;",
+        "choice3": "int ptr*;",
+        "choice4": "ptr int*;",
+        "answer": 1
+    },
+    {
+        "question": "Which function is used to get the length of a string in C?",
+        "choice1": "strlen()",
+        "choice2": "strlength()",
+        "choice3": "length()",
+        "choice4": "strlenlength()",
+        "answer": 1
+    },
+    {
+        "question": "What is the result of `5 / 2` in C?",
+        "choice1": "2.5",
+        "choice2": "2",
+        "choice3": "2.0",
+        "choice4": "3",
+        "answer": 2
+    },
+    {
+        "question": "Which operator is used to access a member of a structure through a pointer in C?",
+        "choice1": ".",
+        "choice2": "->",
+        "choice3": "&",
+        "choice4": "*",
+        "answer": 2
+    },
+    {
+        "question": "What is the output of the following code: `printf(\"%d\", 10 % 3);`?",
+        "choice1": "10",
+        "choice2": "3",
+        "choice3": "1",
+        "choice4": "0",
+        "answer": 3
+    },
+    {
+        "question": "How do you allocate memory dynamically for an integer in C?",
+        "choice1": "int *ptr = malloc(sizeof(int));",
+        "choice2": "int *ptr = allocate(sizeof(int));",
+        "choice3": "int *ptr = new int;",
+        "choice4": "int *ptr = sizeof(int);",
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is used to terminate a `for` loop in C?",
+        "choice1": "break;",
+        "choice2": "exit;",
+        "choice3": "return;",
+        "choice4": "continue;",
+        "answer": 1
+    },
+    {
+        "question": "What will be the output of `printf(\"%d\", 3 * 2 + 4 / 2);`?",
+        "choice1": "7",
+        "choice2": "10",
+        "choice3": "8",
+        "choice4": "11",
+        "answer": 1
+    },
+    {
+        "question": "Which data type is used to store a single character in C?",
+        "choice1": "char",
+        "choice2": "int",
+        "choice3": "float",
+        "choice4": "double",
+        "answer": 1
+    },
+    {
+        "question": "How do you declare a constant variable in C?",
+        "choice1": "const int x = 10;",
+        "choice2": "int const x = 10;",
+        "choice3": "int x = const 10;",
+        "choice4": "constant int x = 10;",
+        "answer": 1
+    },
+    {
+        "question": "Which function is used to copy a string in C?",
+        "choice1": "strcpy()",
+        "choice2": "strcopy()",
+        "choice3": "copystr()",
+        "choice4": "stringcpy()",
+        "answer": 1
+    },
+    {
+        "question": "What is the size of `int` in C on a 64-bit system?",
+        "choice1": "2 bytes",
+        "choice2": "4 bytes",
+        "choice3": "8 bytes",
+        "choice4": "It depends on the compiler",
+        "answer": 2
+    },
+    {
+        "question": "Which keyword is used to define a function in C?",
+        "choice1": "function",
+        "choice2": "define",
+        "choice3": "func",
+        "choice4": "void",
+        "answer": 4
+    },
+    {
+        "question": "What does the `return` statement do in a function?",
+        "choice1": "Exits the function and returns a value",
+        "choice2": "Continues execution of the function",
+        "choice3": "Stops the program",
+        "choice4": "Exits the loop",
+        "answer": 1
+    },
+    {
+        "question": "What is the purpose of the `#define` directive in C?",
+        "choice1": "Define a constant or macro",
+        "choice2": "Include a library",
+        "choice3": "Declare a variable",
+        "choice4": "Allocate memory",
+        "answer": 1
+    },
+    {
+        "question": "How do you access the 5th element of an array `arr` in C?",
+        "choice1": "arr[5]",
+        "choice2": "arr[4]",
+        "choice3": "arr(5)",
+        "choice4": "arr<5>",
+        "answer": 2
+    },
+    {
+        "question": "Which function is used to open a file in C?",
+        "choice1": "fopen()",
+        "choice2": "open()",
+        "choice3": "fileopen()",
+        "choice4": "ifstream()",
+        "answer": 1
+    },
+    {
+        "question": "What will the following code output: `printf(\"%d\", 10 == 10);`?",
+        "choice1": "10",
+        "choice2": "1",
+        "choice3": "0",
+        "choice4": "Error",
+        "answer": 2
+    }
+]
