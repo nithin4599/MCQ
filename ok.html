@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCQ Example with Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .circle {
+      cursor: pointer;
+      font-size: 0.75rem;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+    .circle.active {
+      margin-top: -10px;
+      background-color: #4A90E2;
+      color: white;
+      font-size: 1rem;
+      width: 3rem;
+      height: 3rem;
+      transform: scale(1.2);
+    }
+    .circle.inactive {
+      background-color: #D1D5DB;
+      color: #4A4A4A;
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 0.75rem;
+      transform: scale(1);
+    }
+    .question {
+      display: none;
+    }
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-blue-600 p-4 text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="logo svg (181 x 56 px).svg" alt="Logo" class="h-10 w-10 rounded-full mr-3" style="width: 200px;">
+        <h1 class="text-3xl font-bold">MCQ Quiz</h1>
+      </div>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#" id="submitButton" class="bg-blue-500 text-white py-2 px-4 rounded-md shadow hover:bg-blue-600 transition duration-150 ease-in-out">Submit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container mx-auto p-6">
+    <!-- Page selector for Q1 to Q30 -->
+    <div class="flex flex-wrap justify-center space-x-2 mb-6" id="circles-container">
+      <!-- Circles will be generated here -->
+    </div>
+
+    <div class="bg-white shadow-md rounded p-6">
+      <h1 class="text-3xl font-bold mb-4 text-center">Multiple Choice Questions</h1>
+      <p class="text-gray-700 mb-6 text-center">Please select the correct answer from the options below:</p>
+
+      <!-- Questions -->
+      <div id="questions">
+        <!-- Questions will be generated here -->
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="mt-8 text-center">
+        <button class="bg-blue-500 text-white py-2 px-4 rounded-md shadow hover:bg-blue-600 transition duration-150 ease-in-out" id="prevPage">
+          Previous
+        </button>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded-md shadow hover:bg-blue-600 transition duration-150 ease-in-out" id="nextPage">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for User Info -->
+  <div id="userInfoModal" class="modal">
+    <div class="modal-content">
+      <h2 class="text-xl font-semibold mb-4">Please Enter Your Details</h2>
+      <form id="userInfoForm">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700">Name</label>
+          <input type="text" id="name" class="border border-gray-300 p-2 rounded w-full">
+        </div>
+        <div class="mb-4">
+          <label for="college" class="block text-gray-700">College Name</label>
+          <input type="text" id="college" class="border border-gray-300 p-2 rounded w-full">
+        </div>
+        <div class="mb-4">
+          <label for="registration" class="block text-gray-700">Registration Number</label>
+          <input type="text" id="registration" class="border border-gray-300 p-2 rounded w-full">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700">Email</label>
+          <input type="email" id="email" class="border border-gray-300 p-2 rounded w-full">
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-gray-700">Phone Number</label>
+          <input type="tel" id="phone" class="border border-gray-300 p-2 rounded w-full">
+        </div>
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md shadow hover:bg-blue-600 transition duration-150 ease-in-out">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for Score -->
+  <div id="scoreModal" class="modal">
+    <div class="modal-content">
+      <h2 class="text-xl font-semibold mb-4">Your Score</h2>
+      <p id="scoreMessage" class="text-lg mb-4"></p>
+      <div class="text-left mb-4">
+        <p><strong>Name:</strong> <span id="displayUserName"></span></p>
+        <p><strong>College Name:</strong> <span id="displayUserCollege"></span></p>
+        <p><strong>Registration Number:</strong> <span id="displayUserRegNumber"></span></p>
+        <p><strong>Email:</strong> <span id="displayUserEmail"></span></p>
+        <p><strong>Phone Number:</strong> <span id="displayUserPhone"></span></p>
+      </div>
+      <div class="flex justify-end">
+        <button id="closeModal" class="bg-gray-500 text-white py-2 px-4 rounded-md shadow hover:bg-gray-600 transition duration-150 ease-in-out mr-2">Close</button>
+        <button id="confirmSubmit" class="bg-blue-500 text-white py-2 px-4 rounded-md shadow hover:bg-blue-600 transition duration-150 ease-in-out" onclick="save()">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA1Eu8xyx7OAQ8y4ng-Fu6phrCWJWHiYlc",
+      authDomain: "trial-b04e6.firebaseapp.com",
+      databaseURL: "https://trial-b04e6-default-rtdb.firebaseio.com",
+      projectId: "trial-b04e6",
+      storageBucket: "trial-b04e6.appspot.com",
+      messagingSenderId: "870551973559",
+      appId: "1:870551973559:web:151d8cb3f567a01109e732",
+      measurementId: "G-HM63X09XYF"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Set database variable
+    var database = firebase.database();
+
+    // Save user info and score to Firebase
+    function save() {
+      var name = document.getElementById('displayUserName').textContent;
+      var college = document.getElementById('displayUserCollege').textContent;
+      var registration = document.getElementById('displayUserRegNumber').textContent;
+      var email = document.getElementById('displayUserEmail').textContent;
+      var phone = document.getElementById('displayUserPhone').textContent;
+      var score = document.getElementById('scoreMessage').textContent.match(/\d+/)[0];
+      
+      database.ref('users/' + name).set({
+        name: name,
+        college: college,
+        registration: registration,
+        email: email,
+        phone: phone,
+        score: score
+      });
+
+      alert('Saved');
+    }
+
+    // Shuffle function
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    // Fetch and parse the CSV file
+    async function loadQuestions() {
+      const response = await fetch('questions.csv'); // Update with your CSV file path
+      const data = await response.text();
+      const lines = data.split('\n');
+      const questions = [];
+      const circlesContainer = document.getElementById('circles-container');
+      const questionsContainer = document.getElementById('questions');
+
+      for (let i = 1; i < lines.length; i++) { // Skip header row
+        const [question, option1, option2, option3, option4, correctOption] = lines[i].split(',');
+
+        if (question) {
+          questions.push({
+            question,
+            options: [option1, option2, option3, option4],
+            correctOption
+          });
+        }
+      }
+
+      // Shuffle questions
+      shuffle(questions);
+
+      // Clear existing circles and questions
+      circlesContainer.innerHTML = '';
+      questionsContainer.innerHTML = '';
+
+      // Generate circles and questions
+      questions.forEach((q, index) => {
+        const questionNumber = index + 1;
+
+        // Create circle
+        const circle = document.createElement('div');
+        circle.id = `circle-${questionNumber}`;
+        circle.className = 'circle inactive bg-gray-300 text-gray-700 rounded-full flex items-center justify-center';
+        circle.textContent = questionNumber;
+        circlesContainer.appendChild(circle);
+
+        // Create question
+        const questionDiv = document.createElement('div');
+        questionDiv.id = `q${questionNumber}`;
+        questionDiv.className = 'question text-center';
+        questionDiv.innerHTML = `
+          <p class="text-lg font-semibold mb-4">${questionNumber}. ${q.question}</p>
+          <form class="inline-block">
+            <div class="flex flex-col items-start mb-4">
+              ${q.options.map((option, index) => `
+                <label class="flex items-center mb-2">
+                  <input id="q${questionNumber}_option${index+1}" type="radio" name="question${questionNumber}" value="${String.fromCharCode(65 + index)}" ${String.fromCharCode(65 + index) === q.correctOption ? 'data-correct="true"' : ''} class="form-radio h-4 w-4 text-blue-600 transition duration-150 ease-in-out">
+                  <span class="ml-2 text-gray-700">${String.fromCharCode(65 + index)}. ${option}</span>
+                </label>
+              `).join('')}
+            </div>
+          </form>
+        `;
+        questionsContainer.appendChild(questionDiv);
+      });
+
+      return questions;
+    }
+
+    let currentQuestionIndex = 1;
+
+    function showQuestion(index) {
+      document.querySelectorAll('.question').forEach(function(q) {
+        q.style.display = 'none';
+      });
+
+      document.querySelectorAll('.circle').forEach(function(c) {
+        c.classList.remove('active');
+        c.classList.add('inactive');
+      });
+
+      const activeCircle = document.getElementById(`circle-${index}`);
+      activeCircle.classList.add('active');
+      activeCircle.classList.remove('inactive');
+
+      document.getElementById(`q${index}`).style.display = 'block';
+    }
+
+    function updateQuestionIndex(delta) {
+      currentQuestionIndex += delta;
+      if (currentQuestionIndex < 1) currentQuestionIndex = 1;
+      if (currentQuestionIndex > document.querySelectorAll('.question').length) currentQuestionIndex = document.querySelectorAll('.question').length;
+      showQuestion(currentQuestionIndex);
+    }
+
+    function calculateScore() {
+      let score = 0;
+      const questions = document.querySelectorAll('.question');
+
+      questions.forEach((questionDiv, index) => {
+        const questionNumber = index + 1;
+        const selectedOption = document.querySelector(`input[name="question${questionNumber}"]:checked`);
+        const correctOption = questionDiv.querySelector('input[data-correct="true"]');
+
+        if (selectedOption && selectedOption.value === correctOption?.value) {
+          score++;
+        }
+      });
+
+      return score;
+    }
+
+    function displayScore(score) {
+      const modal = document.getElementById('scoreModal');
+      const scoreMessage = document.getElementById('scoreMessage');
+      scoreMessage.textContent = `You scored ${score} out of ${document.querySelectorAll('.question').length}`;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('scoreModal').style.display = 'none';
+    }
+
+    // Initialize questions and set up event listeners
+    loadQuestions().then(() => {
+      showQuestion(currentQuestionIndex);
+
+      document.querySelectorAll('.circle').forEach(function(circle) {
+        circle.addEventListener('click', function() {
+          const questionNumber = parseInt(this.textContent);
+          currentQuestionIndex = questionNumber;
+          showQuestion(currentQuestionIndex);
+        });
+      });
+
+      document.getElementById('prevPage').addEventListener('click', function() {
+        updateQuestionIndex(-1);
+      });
+
+      document.getElementById('nextPage').addEventListener('click', function() {
+        updateQuestionIndex(1);
+      });
+
+      document.getElementById('submitButton').addEventListener('click', function() {
+        const score = calculateScore();
+        displayScore(score);
+      });
+
+      document.getElementById('closeModal').addEventListener('click', closeModal);
+
+      document.getElementById('confirmSubmit').addEventListener('click', function() {
+        closeModal();
+        alert('Form submitted!');
+      });
+    });
+
+    // Show user info modal on page load
+    window.onload = function() {
+      const userInfoModal = document.getElementById('userInfoModal');
+      userInfoModal.style.display = 'flex';
+
+      document.getElementById('userInfoForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const college = document.getElementById('college').value;
+        const registration = document.getElementById('registration').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        document.getElementById('displayUserName').textContent = name;
+        document.getElementById('displayUserCollege').textContent = college;
+        document.getElementById('displayUserRegNumber').textContent = registration;
+        document.getElementById('displayUserEmail').textContent = email;
+        document.getElementById('displayUserPhone').textContent = phone;
+
+        userInfoModal.style.display = 'none';
+      });
+    };
+  </script>
+</body>
+</html>
