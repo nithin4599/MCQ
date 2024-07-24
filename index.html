@@ -36,26 +36,27 @@
       display: none;
     }
     .question-container {
-      /* display: flex;
       flex-direction: column;
       align-items: center;
-      margin-left: 500px; */
+      margin-left: 500px; 
       margin: 1rem 0;
       padding: 1rem;
       border: 0px solid #ddd;
       border-radius: 0px;
       background-color: #fff;
       box-shadow: 0 2px 4px rgb(255, 255, 255);
-      text-align: center;
+      text-align:justify;
     }
     .question-options {
-        display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally within the container */
-    /* Optional: Set max-width to control the container's width */
-    max-width: 600px;
-    margin: 0 auto; /* Center the container horizontally within its parent */
-    padding: 1rem; /* Optional: Add padding for spacing */
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      align-items: normal; /* Center items horizontally within the container */
+      /* Optional: Set max-width to control the container's width */
+      max-width: 800px;
+      margin: 0 auto; /* Center the container horizontally within its parent */
+      padding: 1rem; /* Optional: Add padding for spacing */
+      margin-left: 0px;
     }
     /* Modal Styles */
     .modal {
@@ -77,13 +78,21 @@
       max-width: 600px;
       text-align: center;
     }
+    /* Disable right-click */
+    body {
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome, Opera, and Safari */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
+    }
   </style>
 </head>
-<body class="bg-gray-100">
-  <header class="bg-blue-600 p-4 text-white shadow-md">
+<body class="bg-gray-100" oncontextmenu="return false;" onkeydown="return disableDevTools(event);">
+  <header class="bg-blue-600 p-4 text-white shadow-md" style="background-color: rgb(255, 255, 255);">
     <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center">
-        <img src="logo svg (181 x 56 px).svg" alt="Logo" class="h-10 w-10 rounded-full mr-3" style="width: 200px;">
+        <img src="logo svg (181 x 56 px).svg" alt="Logo" class="h-10 w-10 rounded-full mr-3" style="height: 50px; width: 300px;">
         <h1 class="text-3xl font-bold">MCQ Quiz</h1>
       </div>
       <nav>
@@ -101,11 +110,11 @@
     </div>
 
     <div class="bg-white shadow-md rounded p-6">
-      <h1 class="text-3xl font-bold mb-4 text-center">Multiple Choice Questions</h1>
-      <p class="text-gray-700 mb-6 text-center">Please select the correct answer from the options below:</p>
+      <h1 class="text-3xl font-bold mb-4 text-left">Multiple Choice Questions</h1>
+      <p class="text-gray-700 mb-6 text-left">Please select the correct answer from the options below:</p>
 
       <!-- Questions -->
-      <div id="questions" ">
+      <div id="questions">
         <!-- Questions will be generated here -->
       </div>
 
@@ -207,8 +216,6 @@
         phone: phone,
         score: score
       });
-
-      
     }
 
     // Shuffle function
@@ -221,7 +228,7 @@
 
     // Load questions from JSON file
     function loadQuestions() {
-      fetch('questions.json') // Update the file path as needed
+      fetch('jkfdnwss.json') // Update the file path as needed
         .then(response => response.json())
         .then(data => {
           const questions = data;
@@ -271,7 +278,7 @@
             const questionsDiv = document.getElementById('questions');
             questions.forEach((question, index) => {
               const questionHtml = `
-                <div class="question question-container" id="question${index + 1}" > 
+                <div class="question question-container" id="question${index + 1}"> 
                   <h2 class="text-xl font-semibold mb-2">${question.question}</h2>
                   <div class="question-options">
                     <div>
@@ -348,6 +355,14 @@
           // Show user info modal on page load
           document.getElementById('userInfoModal').style.display = 'flex';
         });
+    }
+
+    function disableDevTools(event) {
+      const forbiddenKeys = [123, 18, 83, 85, 73]; // F12, Alt, S, U, I (DevTools keys)
+      if (forbiddenKeys.includes(event.keyCode)) {
+        event.preventDefault();
+        return false;
+      }
     }
 
     window.onload = loadQuestions;
