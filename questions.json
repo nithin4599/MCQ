@@ -1,180 +1,209 @@
 [
     {
-        "question": "The International Literacy Day is observed on ?",
-        "choice1": "Sep 8",
-        "choice2": "Nov 28",
-        "choice3": "May 2",
-        "choice4": "Sep 22",
-        "answer": 1
-    },
-    {
-        "question": "The language of Lakshadweep, a Union Territory of India, is ?",
-        "choice1": "Hindi",
-        "choice2": "Tamil",
-        "choice3": "Telugu",
-        "choice4": "Malayalam",
-        "answer": 4
-    },
-    {
-        "question": "In which group of places is the Kumbha Mela held every twelve years ?",
-        "choice1": "Ujjain, Puri; Prayag, Haridwar",
-        "choice2": "Prayag, Haridwar, Ujjain, Nasik",
-        "choice3": "Rameshwaram, Puri, Badrinath, Dwarika",
-        "choice4": "Chittakoot, Ujjain, Prayag, Haridwar",
-        "answer": 2
-    },
-    {
-        "question": "Bahubali festival is related to ?",
-        "choice1": "Islam",
-        "choice2": "Hinduism",
-        "choice3": "Buddhism",
-        "choice4": "Jainism",
-        "answer": 4
-    },
-    {
-        "question": "Which day is observed as the World Standards Day ?",
-        "choice1": "Jun 26",
-        "choice2": "Oct 14",
-        "choice3": "Nov 15",
-        "choice4": "Dec 2",
-        "answer": 2
-    },
-    {
-        "question": "Who is the current Prime Minister of India ?",
-        "choice1": "Shri Narendra Modi",
-        "choice2": "Rahul Gandhi",
-        "choice3": "Dr. Manmohan Singh",
-        "choice4": "Jawahar Lal Nehru",
-        "answer": 1
-    },
-    {
-        "question": "Who is the current President of India ?",
-        "choice1": "Pranab Mukherjee",
-        "choice2": "Narendra Modi",
-        "choice3": "Droupadi Murmu",
-        "choice4": "Rahul Gandhi",
+        "question": "Which segment is used to store interrupt and subroutine return address registers?",
+        "choice1": "Code Segment",
+        "choice2": "Data Segment",
+        "choice3": "Stack Segment",
+        "choice4": "Extra Segment",
         "answer": 3
     },
     {
-        "question": "Where is the Taj Mahal located ?",
-        "choice1": "Agra",
-        "choice2": "Delhi",
-        "choice3": "Mumbai",
-        "choice4": "Mathura",
+        "question": "What is the output of the following program? <br> <br> #define BIT3(0x1<<3) <br> static int a=17; <br> void main() <br> { <br>  printf('%x %x', a |= BIT3, a &= ~BIT3); <br> }",
+        "choice1": "19 11",
+        "choice2": "11 11",
+        "choice3": "19 19",
+        "choice4": "11 19",
         "answer": 1
     },
     {
-        "question": "On which day is Independence Day celebrated ?",
-        "choice1": "14 Nov",
-        "choice2": "15 Aug",
-        "choice3": "26 Jan",
-        "choice4": "2 Oct",
-        "answer": 2
+        "question": "What is the output of the following program? <br><br>void main() <br> { <br> char *s[] = {'WISS','Software','Tech','Solutions'}; <br> char **p; <br> p=s; <br> printf('%s',++*p); <br> printf('%s',*p++); <br> printf('%s\n',++*p); <br> }",
+        "choice1": "ISSISSoftware",
+        "choice2": "WISSISSSoftware",
+        "choice3": "WISSSoftwareftware",
+        "choice4": "ISSSoftwareftware",
+        "answer": 1
     },
     {
-        "question": "Who was the first President of India ?",
-        "choice1": "A.P.J Abdul Kalam",
-        "choice2": "Dr. Rajendra Prasad",
-        "choice3": "Sarvepalli Radhakrishnan",
-        "choice4": "Zakir Hussain",
-        "answer": 2
-    },
-    {
-        "question": "Which of the following is the correct syntax to include a header file in C?",
-        "choice1": "#include <header.h>",
-        "choice2": "#include \"header.h\"",
-        "choice3": "#include {header.h}",
-        "choice4": "#include (header.h)",
-        "answer": 2
-    },
-    {
-        "question": "What is the default value of an uninitialized local variable in C?",
+        "question": "How many times is 'software developer' printed in the following program? <br><br>void main() <br> { <br> int x; <br> for(x=-1; x<=10; x++) <br> { <br> if(x < 5) <br> continue; <br> else <br> break; <br> print('software developer'); <br> } <br> return 0; <br> }",
         "choice1": "0",
-        "choice2": "NULL",
-        "choice3": "Undefined",
-        "choice4": "1",
-        "answer": 3
-    },
-    {
-        "question": "How do you declare a pointer to an integer in C?",
-        "choice1": "int *ptr;",
-        "choice2": "pointer int ptr;",
-        "choice3": "int ptr*;",
-        "choice4": "ptr int*;",
+        "choice2": "1",
+        "choice3": "5",
+        "choice4": "10",
         "answer": 1
-    },
-    {
-        "question": "Which function is used to get the length of a string in C?",
-        "choice1": "strlen()",
-        "choice2": "strlength()",
-        "choice3": "length()",
-        "choice4": "strlenlength()",
+      },
+      {
+        "question": "What will be the output of the following program? <br><br>int main() <br> { <br> float f = 1.0; <br> int i1 = (int) f; <br> int i2 = *(int *)&f; <br> printf('%d\\n', i1); <br> printf('%s\\n', i2); <br> }",
+        "choice1": "1\nruntime error",
+        "choice2": "1\n0",
+        "choice3": "1\n1",
+        "choice4": "0\n1",
         "answer": 1
-    },
-    {
-        "question": "What is the result of `5 / 2` in C?",
-        "choice1": "2.5",
-        "choice2": "2",
-        "choice3": "2.0",
-        "choice4": "3",
+      }
+      ,
+      {
+        "question": "What is the output of the following code? <br><br>int main() <br> { <br> float a = 1.1; <br> double b = 1.1; <br> if(a == b) <br> printf('software developer'); <br> else <br> printf('ML developer'); <br> }",
+        "choice1": "software developer",
+        "choice2": "ML developer",
+        "choice3": "Compilation error",
+        "choice4": "Runtime error",
         "answer": 2
-    },
-    {
-        "question": "Which operator is used to access a member of a structure through a pointer in C?",
-        "choice1": ".",
-        "choice2": "->",
-        "choice3": "&",
-        "choice4": "*",
+      },
+      {
+        "question": "What is the output of the following program when 'Winger IT' is passed as an argument? <br><br>#include <stdio.h> <br>#include <string.h> <br>int main(int argc, char *argv[]) <br>{ <br> int flag = 0; <br> char passwd[10]; <br> memset(passwd, 0, sizeof(passwd)); <br> strcpy(passwd, argv[1]); <br> if (0 == strcmp('Smart', passwd)) <br> { <br> flag = 1; <br> } <br> if (flag) <br> { <br> printf('\\n i am smart\\n'); <br> } <br> else <br> { <br> printf('\\n i am intelleget\\n'); <br> } <br> return 0; <br>}",
+        "choice1": "i am smart",
+        "choice2": "i am intelleget",
+        "choice3": "Compilation error",
+        "choice4": "Runtime error",
         "answer": 2
-    },
-    {
-        "question": "What is the output of the following code: `printf(\"%d\", 10 % 3);`?",
-        "choice1": "10",
-        "choice2": "3",
-        "choice3": "1",
-        "choice4": "0",
-        "answer": 3
-    },
-    {
-        "question": "How do you allocate memory dynamically for an integer in C?",
-        "choice1": "int *ptr = malloc(sizeof(int));",
-        "choice2": "int *ptr = allocate(sizeof(int));",
-        "choice3": "int *ptr = new int;",
-        "choice4": "int *ptr = sizeof(int);",
+      },
+      {
+        "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main(void) <br>{ <br> char *ptr = \"HTTP\"; <br> printf(\"\\n [%c] \\n\", *ptr++); <br> printf(\"\\n [%c] \\n\", *ptr); <br> return 0; <br>}",
+        "choice1": "[H] \n [T]",
+        "choice2": "[H] \n [H]",
+        "choice3": "[T] \n [T]",
+        "choice4": "[H] \n [P]",
         "answer": 1
-    },
-    {
-        "question": "Which of the following is used to terminate a `for` loop in C?",
-        "choice1": "break;",
-        "choice2": "exit;",
-        "choice3": "return;",
-        "choice4": "continue;",
-        "answer": 1
-    },
-    {
-        "question": "What will be the output of `printf(\"%d\", 3 * 2 + 4 / 2);`?",
-        "choice1": "7",
-        "choice2": "10",
-        "choice3": "8",
-        "choice4": "11",
-        "answer": 1
-    },
-    {
-        "question": "Which data type is used to store a single character in C?",
-        "choice1": "char",
-        "choice2": "int",
-        "choice3": "float",
-        "choice4": "double",
-        "answer": 1
-    },
-    {
-        "question": "How do you declare a constant variable in C?",
-        "choice1": "const int x = 10;",
-        "choice2": "int const x = 10;",
-        "choice3": "int x = const 10;",
-        "choice4": "constant int x = 10;",
-        "answer": 1
-    },
+      }
+,      
+{
+    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main(void) <br>{ <br> int a = 10, b = 20, c = 30; <br> printf(\"\\n %d,%d,%d\\n\", a + b + c, (b = b * 2), (c = c * 2)); <br> return 0; <br>}",
+    "choice1": "60,40,60",
+    "choice2": "60,20,30",
+    "choice3": "60,40,30",
+    "choice4": "60,20,60",
+    "answer": 1
+  },
+  {
+    "question": "What macro definition correctly calculates the number of seconds in a non-leap year?",
+    "choice1": "#define SECONDS_IN_A_YEAR (365 * 24 * 60 * 60)",
+    "choice2": "#define SECONDS_IN_A_YEAR (365 * 24 * 60)",
+    "choice3": "#define SECONDS_IN_A_YEAR (365 * 24)",
+    "choice4": "#define SECONDS_IN_A_YEAR (365)",
+    "answer": 1
+  }
+,  
+{
+    "question": "Using the variable x, which of the following defines an array of ten pointers to functions that take an integer argument and return an integer?",
+    "choice1": "int *x[10](int);",
+    "choice2": "int (*x[10])(int);",
+    "choice3": "int x[10](int *);",
+    "choice4": "int x[10][int];",
+    "answer": 2
+  }
+,
+{
+    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>union address { <br> char *name; <br> char street[10]; <br> int pin; <br>}; <br>int main() { <br> union address emp, *p; <br> emp.name = \"Hu/Obli\"; <br> p = &emp; <br> printf(\"%s%s\", p->name, (*p).name); <br> return 0; <br>}",
+    "choice1": "Hu/Obli",
+    "choice2": "Hu/ObliHu/Obli",
+    "choice3": "Compilation error",
+    "choice4": "Runtime error",
+    "answer": 2
+  }
+,  
+{
+    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>struct emp { <br> char *name; <br> int id; <br>}; <br>int main() { <br> static struct emp e1 = {\"A\", 1}, e2 = {\"B\", 2}, e3 = {\"C\", 3}; <br> struct emp (*array[]) = {&e1, &e2, &e3}; <br> struct emp (*(*ptr)[3]) = &array; <br> printf(\"%s %d\", (**(*ptr + 1)).name, (*(ptr + 1))->id); <br> return 0; <br>}",
+    "choice1": "A 1",
+    "choice2": "B 2",
+    "choice3": "C 3",
+    "choice4": "Compilation error",
+    "answer": 2
+  },
+  {
+    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main(void) { <br> int a = 7; <br> int b = 1; <br> if (a >= b) { <br> int temp = a; <br> a = b; <br> b = temp; <br> } <br> printf(\"a=%d\\tb=%d\\n\", a, b); <br> return 0; <br>}",
+    "choice1": "a=7 b=1",
+    "choice2": "a=1 b=7",
+    "choice3": "a=7 b=7",
+    "choice4": "a=1 b=1",
+    "answer": 2
+  }
+  ,
+  {
+    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>#include <string.h> <br>void main() { <br> int i = 0; <br> for (; i < 2;) { <br> printf(\"%d\", ++i); <br> } <br>}",
+    "choice1": "0",
+    "choice2": "12",
+    "choice3": "1 2",
+    "choice4": "Error",
+    "answer": 2
+  },
+  {
+    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main() { <br> printf(1+\"%d\", 4); <br> return 0; <br>}",
+    "choice1": "d4",
+    "choice2": "4",
+    "choice3": "Error",
+    "choice4": "d",
+    "answer": 1
+  }
+  ,
+  {
+    "question": "What is the output of the following code? <br><br>#include <stdio.h> <br>int main() { <br> printf(\"%d\", printf(\"Winger IT Solutions\")); <br> return 0; <br>}",
+    "choice1": "Winger IT Solutions18",
+    "choice2": "18",
+    "choice3": "Winger IT Solutions",
+    "choice4": "Error",
+    "answer": 1
+  },
+
+ {
+  "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>#include <stdlib.h> <br>int main() { <br> int *p = malloc(sizeof(int)); <br> *p = 10; <br> free(p); <br> printf(\"%d\", *p); <br> return 0; <br>}",
+  "choice1": "10",
+  "choice2": "0",
+  "choice3": "Undefined behavior",
+  "choice4": "Error",
+  "answer": 3
+},
+
+
+
+{
+    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main() { <br> int x = 5; <br> int y = 10; <br> int z = (x > y) ? x : y; <br> printf(\"%d\", z); <br> return 0; <br>}",
+    "choice1": "5",
+    "choice2": "10",
+    "choice3": "15",
+    "choice4": "Error",
+    "answer": 2
+  }
+,  
+{
+    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main() { <br> int a = 0; <br> int b = 1; <br> int c = 2; <br> a = (b > c) ? b : c; <br> printf(\"%d %d %d\", a, b, c); <br> return 0; <br>}",
+    "choice1": "0 1 2",
+    "choice2": "2 1 2",
+    "choice3": "1 2 2",
+    "choice4": "Error",
+    "answer": 2
+  }
+,
+
+{
+  "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>#include <string.h> <br>int main() { <br> char str1[20] = \"Hello\"; <br> char str2[20] = \"World\"; <br> strcat(str1, str2); <br> printf(\"%s\", str1); <br> return 0; <br>}",
+  "choice1": "HelloWorld",
+  "choice2": "Hello World",
+  "choice3": "WorldHello",
+  "choice4": "Error",
+  "answer": 1
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
         "question": "Which function is used to copy a string in C?",
         "choice1": "strcpy()",
