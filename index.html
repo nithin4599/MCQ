@@ -358,7 +358,7 @@
     }
 
     function disableDevTools(event) {
-      const forbiddenKeys = [123, 18, 83, 85, 73]; // F12, Alt, S, U, I (DevTools keys)
+      const forbiddenKeys = [123, 18,17,91 ]; // F12, Alt, S, U, I (DevTools keys)
       if (forbiddenKeys.includes(event.keyCode)) {
         event.preventDefault();
         return false;
