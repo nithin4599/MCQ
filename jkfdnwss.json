@@ -1,271 +1,268 @@
 [
     {
-        "question": "Which segment is used to store interrupt and subroutine return address registers?",
-        "choice1": "Code Segment",
-        "choice2": "Data Segment",
-        "choice3": "Stack Segment",
-        "choice4": "Extra Segment",
+        "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int number1 = -17; <br>int number2 = -5; <br>int result = number1 % number2; <br>printf(\"%d\", result); <br>return 0; <br>}",
+        "choice1": "-2",
+        "choice2": "2",
+        "choice3": "3",
+        "choice4": "-3",
+        "answer": 1
+    },
+    {
+        "question": "What is the output of the following program? <br><br>int main() <br>{ <br>char line[] = \"Welcome to WingerIT on C Programming\"; <br>char string1[10], string2[10], string3[10]; <br>sscanf(line, \"%*s %*s %s %*s %*s %s %s\", string1, string2, string3); <br>printf(\"%s %s %s\\n\", string1, string2, string3); <br>return 0; <br>}",
+        "choice1": "tutorials on C",
+        "choice2": "WingerIT on",
+        "choice3": "WingerIT on C",
+        "choice4": "WingerIT Programming",
+        "answer": 4
+    },
+    {
+        "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int array[10] = {3, 0, 8, 1, 12, 8, 9, 2, 13, 10}; <br>int x, y, z; <br>x = ++array[2]; <br>y = array[2]++; <br>z = array[x++]; <br>printf(\"%d %d %d\", x, y, z); <br>return 0; <br>}",
+        "choice1": "10 9 1",
+        "choice2": "10 8 1",
+        "choice3": "9 9 1",
+        "choice4": "9 8 1",
         "answer": 3
-    },
-    {
-        "question": "What is the output of the following program? <br> <br> #define BIT3(0x1<<3) <br> static int a=17; <br> void main() <br> { <br>  printf('%x %x', a |= BIT3, a &= ~BIT3); <br> }",
-        "choice1": "19 11",
-        "choice2": "11 11",
-        "choice3": "19 19",
-        "choice4": "11 19",
-        "answer": 1
-    },
-    {
-        "question": "What is the output of the following program? <br><br>void main() <br> { <br> char *s[] = {'WISS','Software','Tech','Solutions'}; <br> char **p; <br> p=s; <br> printf('%s',++*p); <br> printf('%s',*p++); <br> printf('%s\n',++*p); <br> }",
-        "choice1": "ISSISSoftware",
-        "choice2": "WISSISSSoftware",
-        "choice3": "WISSSoftwareftware",
-        "choice4": "ISSSoftwareftware",
-        "answer": 1
-    },
-    {
-        "question": "How many times is 'software developer' printed in the following program? <br><br>void main() <br> { <br> int x; <br> for(x=-1; x<=10; x++) <br> { <br> if(x < 5) <br> continue; <br> else <br> break; <br> print('software developer'); <br> } <br> return 0; <br> }",
-        "choice1": "0",
-        "choice2": "1",
-        "choice3": "5",
-        "choice4": "10",
-        "answer": 1
-      },
-      {
-        "question": "What will be the output of the following program? <br><br>int main() <br> { <br> float f = 1.0; <br> int i1 = (int) f; <br> int i2 = *(int *)&f; <br> printf('%d\\n', i1); <br> printf('%s\\n', i2); <br> }",
-        "choice1": "1\nruntime error",
-        "choice2": "1\n0",
-        "choice3": "1\n1",
-        "choice4": "0\n1",
-        "answer": 1
-      }
-      ,
-      {
-        "question": "What is the output of the following code? <br><br>int main() <br> { <br> float a = 1.1; <br> double b = 1.1; <br> if(a == b) <br> printf('software developer'); <br> else <br> printf('ML developer'); <br> }",
-        "choice1": "software developer",
-        "choice2": "ML developer",
-        "choice3": "Compilation error",
-        "choice4": "Runtime error",
-        "answer": 2
-      },
-      {
-        "question": "What is the output of the following program when 'Winger IT' is passed as an argument? <br><br>#include <stdio.h> <br>#include <string.h> <br>int main(int argc, char *argv[]) <br>{ <br> int flag = 0; <br> char passwd[10]; <br> memset(passwd, 0, sizeof(passwd)); <br> strcpy(passwd, argv[1]); <br> if (0 == strcmp('Smart', passwd)) <br> { <br> flag = 1; <br> } <br> if (flag) <br> { <br> printf('\\n i am smart\\n'); <br> } <br> else <br> { <br> printf('\\n i am intelleget\\n'); <br> } <br> return 0; <br>}",
-        "choice1": "i am smart",
-        "choice2": "i am intelleget",
-        "choice3": "Compilation error",
-        "choice4": "Runtime error",
-        "answer": 2
-      },
-      {
-        "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main(void) <br>{ <br> char *ptr = \"HTTP\"; <br> printf(\"\\n [%c] \\n\", *ptr++); <br> printf(\"\\n [%c] \\n\", *ptr); <br> return 0; <br>}",
-        "choice1": "[H] \n [T]",
-        "choice2": "[H] \n [H]",
-        "choice3": "[T] \n [T]",
-        "choice4": "[H] \n [P]",
-        "answer": 1
-      }
-,      
-{
-    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main(void) <br>{ <br> int a = 10, b = 20, c = 30; <br> printf(\"\\n %d,%d,%d\\n\", a + b + c, (b = b * 2), (c = c * 2)); <br> return 0; <br>}",
-    "choice1": "60,40,60",
-    "choice2": "60,20,30",
-    "choice3": "60,40,30",
-    "choice4": "60,20,60",
-    "answer": 1
-  },
-  {
-    "question": "What macro definition correctly calculates the number of seconds in a non-leap year?",
-    "choice1": "#define SECONDS_IN_A_YEAR (365 * 24 * 60 * 60)",
-    "choice2": "#define SECONDS_IN_A_YEAR (365 * 24 * 60)",
-    "choice3": "#define SECONDS_IN_A_YEAR (365 * 24)",
-    "choice4": "#define SECONDS_IN_A_YEAR (365)",
-    "answer": 1
-  }
-,  
-{
-    "question": "Using the variable x, which of the following defines an array of ten pointers to functions that take an integer argument and return an integer?",
-    "choice1": "int *x[10](int);",
-    "choice2": "int (*x[10])(int);",
-    "choice3": "int x[10](int *);",
-    "choice4": "int x[10][int];",
-    "answer": 2
-  }
+    }
 ,
 {
-    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>union address { <br> char *name; <br> char street[10]; <br> int pin; <br>}; <br>int main() { <br> union address emp, *p; <br> emp.name = \"Hu/Obli\"; <br> p = &emp; <br> printf(\"%s%s\", p->name, (*p).name); <br> return 0; <br>}",
-    "choice1": "Hu/Obli",
-    "choice2": "Hu/ObliHu/Obli",
-    "choice3": "Compilation error",
-    "choice4": "Runtime error",
-    "answer": 2
-  }
-,  
-{
-    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>struct emp { <br> char *name; <br> int id; <br>}; <br>int main() { <br> static struct emp e1 = {\"A\", 1}, e2 = {\"B\", 2}, e3 = {\"C\", 3}; <br> struct emp (*array[]) = {&e1, &e2, &e3}; <br> struct emp (*(*ptr)[3]) = &array; <br> printf(\"%s %d\", (**(*ptr + 1)).name, (*(ptr + 1))->id); <br> return 0; <br>}",
-    "choice1": "A 1",
-    "choice2": "B 2",
-    "choice3": "C 3",
-    "choice4": "Compilation error",
-    "answer": 2
-  },
-  {
-    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main(void) { <br> int a = 7; <br> int b = 1; <br> if (a >= b) { <br> int temp = a; <br> a = b; <br> b = temp; <br> } <br> printf(\"a=%d\\tb=%d\\n\", a, b); <br> return 0; <br>}",
-    "choice1": "a=7 b=1",
-    "choice2": "a=1 b=7",
-    "choice3": "a=7 b=7",
-    "choice4": "a=1 b=1",
-    "answer": 2
-  }
-  ,
-  {
-    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>#include <string.h> <br>void main() { <br> int i = 0; <br> for (; i < 2;) { <br> printf(\"%d\", ++i); <br> } <br>}",
-    "choice1": "0",
-    "choice2": "12",
-    "choice3": "1 2",
-    "choice4": "Error",
-    "answer": 2
-  },
-  {
-    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main() { <br> printf(1+\"%d\", 4); <br> return 0; <br>}",
-    "choice1": "d4",
-    "choice2": "4",
-    "choice3": "Error",
-    "choice4": "d",
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int x = 6; <br>int y = 4; <br>int z; <br>if(!x >= 5) <br>y = 3; <br>z = 2; <br>printf(\"%d %d\", z, y); <br>return 0; <br>}",
+    "choice1": "2 4",
+    "choice2": "2 3",
+    "choice3": "6 4",
+    "choice4": "6 3",
     "answer": 1
-  }
-  ,
-  {
-    "question": "What is the output of the following code? <br><br>#include <stdio.h> <br>int main() { <br> printf(\"%d\", printf(\"Winger IT Solutions\")); <br> return 0; <br>}",
-    "choice1": "Winger IT Solutions18",
-    "choice2": "18",
-    "choice3": "Winger IT Solutions",
-    "choice4": "Error",
-    "answer": 1
-  },
+}
+,
 
- {
-  "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>#include <stdlib.h> <br>int main() { <br> int *p = malloc(sizeof(int)); <br> *p = 10; <br> free(p); <br> printf(\"%d\", *p); <br> return 0; <br>}",
-  "choice1": "10",
-  "choice2": "0",
-  "choice3": "Undefined behavior",
-  "choice4": "Error",
-  "answer": 3
+{
+    "question": "Predict the output of the following segment of code: <br>// ASSUME 64-bit compiler<br>// Add stdio.h and stdlib.h header file in below code<br><br>#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt;<br><br>int main() <br>{ <br>struct DataFlair <br>{ <br>int value; <br>struct DataFlair *link; <br>}; <br>struct DataFlair *x, *y; <br>x = (struct DataFlair *) malloc(sizeof(struct DataFlair)); <br>y = (struct DataFlair *) malloc(sizeof(struct DataFlair)); <br>printf(\"%ld %ld\", sizeof(x), sizeof(y)); <br>return 0; <br>}",
+    "choice1": "16 16",
+    "choice2": "8 8",
+    "choice3": "4 4",
+    "choice4": "12 12",
+    "answer": 2
+}
+,
+{
+    "question": "Predict the output of the following segment of code: <br>// ASSUME 64-bit compiler<br>// Add stdio.h header file in below code<br><br>#include &lt;stdio.h&gt;<br><br>struct DataFlair <br>{ <br>int a; <br>float b; <br>char array[20]; <br>} d; <br>int main() <br>{ <br>printf(\"%ld\", sizeof(struct DataFlair)); <br>return 0; <br>}",
+    "choice1": "28",
+    "choice2": "32",
+    "choice3": "24",
+    "choice4": "20",
+    "answer": 2
+}
+,
+{
+    "question": "If n and p are unsigned int variables in a C program, we wish to set p to nC3. If n is large, which of the following statements is most likely to set p correctly?",
+    "choice1": "p = (n * (n - 1) * (n - 2)) / 6;",
+    "choice2": "p = n * (n - 1) * (n - 2);",
+    "choice3": "p = (n * (n - 1)) / (2 * (n - 2));",
+    "choice4": "p = (n * (n - 1) * (n - 2) * (n - 3)) / 24;",
+    "answer": 1
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int a, b; <br>printf(\"Enter two integers: \"); <br>scanf(\"%d %d\", &a, &b); <br>printf(\"Sum: %d\\n\", a + b); <br>printf(\"Difference: %d\\n\", a - b); <br>printf(\"Product: %d\\n\", a * b); <br>if (b != 0) { <br>printf(\"Quotient: %.2f\\n\", (float)a / b); <br>} else { <br>printf(\"Cannot divide by zero.\\n\"); <br>} <br>return 0; <br>}",
+    "choice1": "Sum, Difference, Product, and Quotient of the two integers",
+    "choice2": "Sum and Product of the two integers",
+    "choice3": "Sum and Difference of the two integers",
+    "choice4": "Difference and Product of the two integers",
+    "answer": 3
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int arr[] = {3, 5, 1, 8, 7}; <br>int i, largest = arr[0], smallest = arr[0]; <br>for (i = 1; i < 5; i++) { <br>if (arr[i] > largest) largest = arr[i]; <br>if (arr[i] < smallest) smallest = arr[i]; <br>} <br>printf(\"Largest: %d\\n\", largest); <br>printf(\"Smallest: %d\\n\", smallest); <br>return 0; <br>}",
+    "choice1": "Largest: 3, Smallest: 1",
+    "choice2": "Largest: 8, Smallest: 1",
+    "choice3": "Largest: 7, Smallest: 5",
+    "choice4": "Largest: 8, Smallest: 3",
+    "answer": 4
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>char str[] = \"hello\"; <br>int length = strlen(str); <br>for (int i = length - 1; i >= 0; i--) { <br>printf(\"%c\", str[i]); <br>} <br>printf(\"\\n\"); <br>return 0; <br>}",
+    "choice1": "hello",
+    "choice2": "olleh",
+    "choice3": "hell",
+    "choice4": "heol",
+    "answer": 2
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int A[2][2] = { {1, 2}, {3, 4} }; <br>int B[2][2] = { {2, 0}, {1, 3} }; <br>int C[2][2]; <br>for (int i = 0; i < 2; i++) { <br>for (int j = 0; j < 2; j++) { <br>C[i][j] = 0; <br>for (int k = 0; k < 2; k++) { <br>C[i][j] += A[i][k] * B[k][j]; <br>} <br>} <br>} <br>for (int i = 0; i < 2; i++) { <br>for (int j = 0; j < 2; j++) { <br>printf(\"%d \", C[i][j]); <br>} <br>printf(\"\\n\"); <br>} <br>return 0; <br>}",
+    "choice1": "2 6 5 15",
+    "choice2": "2 6 7 15",
+    "choice3": "4 6 7 15",
+    "choice4": "4 6 5 13",
+    "answer": 3
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int n = 5, a = 0, b = 1, c; <br>printf(\"%d %d \", a, b); <br>for (int i = 2; i < n; i++) { <br>c = a + b; <br>printf(\"%d \", c); <br>a = b; <br>b = c; <br>} <br>printf(\"\\n\"); <br>return 0; <br>}",
+    "choice1": "0 1 1 2 3",
+    "choice2": "1 1 2 3 5",
+    "choice3": "0 1 2 3 5",
+    "choice4": "0 1 1 3 5",
+    "answer": 1
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int num = 29, i, isPrime = 1; <br>for (i = 2; i <= num / 2; i++) { <br>if (num % i == 0) { <br>isPrime = 0; <br>break; <br>} <br>} <br>if (isPrime) <br>printf(\"Prime\\n\"); <br>else <br>printf(\"Not Prime\\n\"); <br>return 0; <br>}",
+    "choice1": "Prime",
+    "choice2": "Not Prime",
+    "choice3": "Error",
+    "choice4": "Undefined",
+    "answer": 2
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int num = 5, factorial = 1; <br>for (int i = 1; i <= num; i++) { <br>factorial *= i; <br>} <br>printf(\"Factorial: %d\\n\", factorial); <br>return 0; <br>}",
+    "choice1": "120",
+    "choice2": "24",
+    "choice3": "60",
+    "choice4": "100",
+    "answer": 4
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>char str[] = \"radar\"; <br>int length = strlen(str); <br>int flag = 1; <br>for (int i = 0; i < length / 2; i++) { <br>if (str[i] != str[length - i - 1]) { <br>flag = 0; <br>break; <br>} <br>} <br>if (flag) <br>printf(\"Palindrome\\n\"); <br>else <br>printf(\"Not Palindrome\\n\"); <br>return 0; <br>}",
+    "choice1": "Palindrome",
+    "choice2": "Not Palindrome",
+    "choice3": "Error",
+    "choice4": "Undefined",
+    "answer": 3
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int arr[] = {64, 34, 25, 12, 22}; <br>int n = 5; <br>for (int i = 0; i < n-1; i++) { <br>for (int j = 0; j < n-i-1; j++) { <br>if (arr[j] > arr[j+1]) { <br>int temp = arr[j]; <br>arr[j] = arr[j+1]; <br>arr[j+1] = temp; <br>} <br>} <br>} <br>for (int i = 0; i < n; i++) { <br>printf(\"%d \", arr[i]); <br>} <br>printf(\"\\n\"); <br>return 0; <br>}",
+    "choice1": "12 22 25 34 64",
+    "choice2": "64 34 25 22 12",
+    "choice3": "12 25 22 34 64",
+    "choice4": "34 25 12 22 64",
+    "answer": 2
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>FILE *file; <br>char ch; <br>file = fopen(\"sample.txt\", \"w\"); <br>if (file == NULL) { <br>printf(\"Error opening file\\n\"); <br>return 1; <br>} <br>fprintf(file, \"Hello, File I/O!\"); <br>fclose(file); <br>file = fopen(\"sample.txt\", \"r\"); <br>if (file == NULL) { <br>printf(\"Error opening file\\n\"); <br>return 1; <br>} <br>while ((ch = fgetc(file)) != EOF) { <br>putchar(ch); <br>} <br>fclose(file); <br>return 0; <br>}",
+    "choice1": "Hello, File I/O!",
+    "choice2": "Error opening file",
+    "choice3": "Nothing (Empty output)",
+    "choice4": "Hello",
+    "answer": 1
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>struct Node { <br>int data; <br>struct Node* next; <br>}; <br>void printList(struct Node* n) { <br>while (n != NULL) { <br>printf(\"%d \", n->data); <br>n = n->next; <br>} <br>printf(\"\\n\"); <br>} <br>int main() { <br>struct Node* head = (struct Node*)malloc(sizeof(struct Node)); <br>struct Node* second = (struct Node*)malloc(sizeof(struct Node)); <br>struct Node* third = (struct Node*)malloc(sizeof(struct Node)); <br>head->data = 1; <br>head->next = second; <br>second->data = 2; <br>second->next = third; <br>third->data = 3; <br>third->next = NULL; <br>printList(head); <br>return 0; <br>} <br>}",
+    "choice1": "1 2 3",
+    "choice2": "1 2",
+    "choice3": "3 2 1",
+    "choice4": "Error",
+    "answer": 2
+},
+{
+    "question": "What is the output of the following program? <br><br>int binarySearch(int arr[], int size, int target) { <br>int left = 0, right = size - 1; <br>while (left <= right) { <br>int mid = left + (right - left) / 2; <br>if (arr[mid] == target) { <br>return mid; <br>} <br>if (arr[mid] < target) { <br>left = mid + 1; <br>} else { <br>right = mid - 1; <br>} <br>} <br>return -1; <br>} <br>int main() { <br>int arr[] = {1, 3, 5, 7, 9}; <br>int size = sizeof(arr) / sizeof(arr[0]); <br>int index = binarySearch(arr, size, 7); <br>printf(\"Index: %d\\n\", index); <br>return 0; <br>}",
+    "choice1": "Index: 3",
+    "choice2": "Index: 4",
+    "choice3": "Index: 2",
+    "choice4": "Index: -1",
+    "answer": 4
+},
+{
+    "question": "What is the output of the following program? <br><br>int main() <br>{ <br>int *arr; <br>int n = 5; <br>arr = (int*)malloc(n * sizeof(int)); <br>if (arr == NULL) { <br>printf(\"Memory allocation failed\\n\"); <br>return 1; <br>} <br>for (int i = 0; i < n; i++) { <br>arr[i] = i * 2; <br>} <br>for (int i = 0; i < n; i++) { <br>printf(\"%d \", arr[i]); <br>} <br>printf(\"\\n\"); <br>free(arr); <br>return 0; <br>}",
+    "choice1": "0 2 4 6 8",
+    "choice2": "1 2 3 4 5",
+    "choice3": "2 4 6 8 10",
+    "choice4": "0 1 2 3 4",
+    "answer": 3
 },
 
 
 
-{
-    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main() { <br> int x = 5; <br> int y = 10; <br> int z = (x > y) ? x : y; <br> printf(\"%d\", z); <br> return 0; <br>}",
-    "choice1": "5",
-    "choice2": "10",
-    "choice3": "15",
-    "choice4": "Error",
-    "answer": 2
-  }
-,  
-{
-    "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>int main() { <br> int a = 0; <br> int b = 1; <br> int c = 2; <br> a = (b > c) ? b : c; <br> printf(\"%d %d %d\", a, b, c); <br> return 0; <br>}",
-    "choice1": "0 1 2",
-    "choice2": "2 1 2",
-    "choice3": "1 2 2",
-    "choice4": "Error",
-    "answer": 2
-  }
-,
+
+
 
 {
-  "question": "What is the output of the following program? <br><br>#include <stdio.h> <br>#include <string.h> <br>int main() { <br> char str1[20] = \"Hello\"; <br> char str2[20] = \"World\"; <br> strcat(str1, str2); <br> printf(\"%s\", str1); <br> return 0; <br>}",
-  "choice1": "HelloWorld",
-  "choice2": "Hello World",
-  "choice3": "WorldHello",
-  "choice4": "Error",
-  "answer": 1
+    "question": "If (2x - y) = 4, then (6x - 3y) = ?",
+    "choice1": "15",
+    "choice2": "12",
+    "choice3": "18",
+    "choice4": "10",
+    "answer": 2
+},
+{
+    "question": "The two colors seen at the extreme ends of the pH chart are:",
+    "choice1": "Red and blue",
+    "choice2": "Red and green",
+    "choice3": "Green and blue",
+    "choice4": "Orange and green",
+    "answer": 1
+},
+{
+    "question": "Thirty men take 20 days to complete a job working 9 hours a day. How many hours a day should 40 men work to complete the job?",
+    "choice1": "8 hrs",
+    "choice2": "6 hours, 45 minutes",
+    "choice3": "7 hrs",
+    "choice4": "9 hrs",
+    "answer": 2
+},
+{
+    "question": "A cow is tethered in the middle of the field with a 14-foot-long rope. If the cow grazes 100 sq. ft. per day, then approximately what time will it take for the cow to graze the whole field? (Approx)",
+    "choice1": "2 days",
+    "choice2": "6.15 days",
+    "choice3": "18.5 days",
+    "choice4": "24 days",
+    "choice5": "None of these",
+    "answer": 2
+},
+{
+    "question": "A shopkeeper sold a TV set for Rs. 17,940 with a discount of 8% and earned a profit of 19.6%. What would have been the percentage of profit earned if no discount was offered?",
+    "choice1": "24%",
+    "choice2": "25%",
+    "choice3": "30%",
+    "choice4": "None of these",
+    "answer": 3
+},
+{
+    "question": "What is the missing number in this series? 8, 2, 14, 6, 11, ?, 14, 6, 18, 12",
+    "choice1": "11",
+    "choice2": "9",
+    "choice3": "8",
+    "choice4": "6",
+    "answer": 3
+},
+{
+    "question": "If the value of x lies between 0 and 1, which of the following is the largest?",
+    "choice1": "X",
+    "choice2": "X²",
+    "choice3": "-x",
+    "choice4": "1/x",
+    "answer": 4
+},
+{
+    "question": "A person has 4 coins each of different denominations. What is the number of different sums of money the person can form (using one or more coins at a time)?",
+    "choice1": "15",
+    "choice2": "16",
+    "choice3": "12",
+    "choice4": "11",
+    "answer": 1
+},
+{
+    "question": "What is the missing number in this series? 8, 2, 14, 6, 11, ?, 14, 6, 18, 12",
+    "choice1": "11",
+    "choice2": "9",
+    "choice3": "8",
+    "choice4": "6",
+    "answer": 3
+},
+{
+    "question": "At what time after 4.00 p.m. is the minute's hand of the clock exactly aligned with the hour hand?",
+    "choice1": "4:21:49.5",
+    "choice2": "4:27:49.5",
+    "choice3": "3:21:49.5",
+    "choice4": "4:21:44.5",
+    "answer": 1
+},
+{
+    "question": "If the radius of a circle is diminished by 10%, by what percentage is its area diminished?",
+    "choice1": "10%",
+    "choice2": "19%",
+    "choice3": "20%",
+    "choice4": "36%",
+    "answer": 2
 }
-,
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {
-        "question": "Which function is used to copy a string in C?",
-        "choice1": "strcpy()",
-        "choice2": "strcopy()",
-        "choice3": "copystr()",
-        "choice4": "stringcpy()",
-        "answer": 1
-    },
-    {
-        "question": "What is the size of `int` in C on a 64-bit system?",
-        "choice1": "2 bytes",
-        "choice2": "4 bytes",
-        "choice3": "8 bytes",
-        "choice4": "It depends on the compiler",
-        "answer": 2
-    },
-    {
-        "question": "Which keyword is used to define a function in C?",
-        "choice1": "function",
-        "choice2": "define",
-        "choice3": "func",
-        "choice4": "void",
-        "answer": 4
-    },
-    {
-        "question": "What does the `return` statement do in a function?",
-        "choice1": "Exits the function and returns a value",
-        "choice2": "Continues execution of the function",
-        "choice3": "Stops the program",
-        "choice4": "Exits the loop",
-        "answer": 1
-    },
-    {
-        "question": "What is the purpose of the `#define` directive in C?",
-        "choice1": "Define a constant or macro",
-        "choice2": "Include a library",
-        "choice3": "Declare a variable",
-        "choice4": "Allocate memory",
-        "answer": 1
-    },
-    {
-        "question": "How do you access the 5th element of an array `arr` in C?",
-        "choice1": "arr[5]",
-        "choice2": "arr[4]",
-        "choice3": "arr(5)",
-        "choice4": "arr<5>",
-        "answer": 2
-    },
-    {
-        "question": "Which function is used to open a file in C?",
-        "choice1": "fopen()",
-        "choice2": "open()",
-        "choice3": "fileopen()",
-        "choice4": "ifstream()",
-        "answer": 1
-    },
-    {
-        "question": "What will the following code output: `printf(\"%d\", 10 == 10);`?",
-        "choice1": "10",
-        "choice2": "1",
-        "choice3": "0",
-        "choice4": "Error",
-        "answer": 2
-    }
 ]
